@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>💍</title>
+    <style>
+        body {
+            background-color: pink;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        #no {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>💖 ¿Te quieres casar conmigo, mami? 💍</h1>
+
+    <button onclick="respuestaSi()">Sí 💘</button>
+    <button id="no" onmouseover="moverNo()">No 😢</button>
+
+    <script>
+        function respuestaSi() {
+            document.body.innerHTML = "<h1>😍 ¡Sabía que dirías que sí! ¡Te amo! ¡Te adoro, mi niñaaaaaaaa!💍💖</h1>";
+        }
+
+        function moverNo() {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            document.getElementById("no").style.left = x + "px";
+            document.getElementById("no").style.top = y + "px";
+        }
+    </script>
+
+</body>
+</html>
